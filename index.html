@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event and Event Handling</title>
+</head>
+<body>
+    <script src="file1.js"></script>
+    <button onclick="alert('This is click event')">Click Me</button>
+    <input type="text" onfocus="change_color()" onkeyup="update_text()" id="field"/>
+    <h1 id="heading">This is Text Area</h1>
+    <script>
+        const my_fun = () =>{
+            alert("This is form...");
+        }
+        const change_color = () =>
+        {
+            document.getElementById("field").style.backgroundColor = "#e2e2e2";
+        }
+        const update_text = () =>
+        {
+            let data = document.getElementById('field').value;
+            document.getElementById("heading").innerHTML = data;
+        }
+    </script>
+</body>
+</html>
