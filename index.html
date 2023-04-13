@@ -13,11 +13,36 @@
     <!-- <script src="file4.js"></script> -->
     <!-- <script src="file5.js"></script> -->
     <!-- <script src="file6.js"></script> -->
-    <script src="file7.js"></script>
+    <!-- <script src="file7.js"></script> -->
+    <!-- <script src="file8.js"></script> -->
     
-    <button onclick="alert('This is click event')">Click Me</button>
-    <input type="text" onfocus="change_color()" onkeyup="update_text()" id="field"/>
+    <!-- <button onclick="alert('This is click event')">Click Me</button> -->
+    <!-- <input type="text" onfocus="change_color()" onkeyup="update_text()" id="field"/> -->
     <!-- <h1 id="heading">This is Text Area</h1> -->
-    
+
+    <form action="" name="myform">Username: <input type="text" name="u_field">
+    <small id="u_small"></small><br>
+    <input type="submit" name="btn" value="Submit">
+    </form>
+   <script>
+function valData ()
+{
+  var ptrn = /^([^0-9\w]*)$/;   
+
+  if(ptrn.test(document.myform.u_field.value))
+  {
+    document.getElementById("u_small").textContent = "Username is Valid";
+    document.getElementById("u_small").style.color = 'green';
+  }
+  else 
+  {
+    document.getElementById("u_small").textContent = "Username is Invalid";
+    document.getElementById("u_small").style.color = 'red';
+  }
+}
+document.myform.u_field.addEventListener("keyup" , valData());
+
+   </script>
+
 </body>
 </html>
